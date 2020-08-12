@@ -10,10 +10,10 @@ public class Functions {
 		long modBy = 2;
 
 		// Loops until it reaches 1
-		while(num != 1) {
+		while (num != 1) {
 			// Divides until it can't anymore and then increments the divisor
 			// Appends divisor onto string each time
-			while(num % modBy == 0) {
+			while (num % modBy == 0) {
 				factors += modBy + ",";
 				num /= modBy;
 			}
@@ -28,7 +28,7 @@ public class Functions {
 
 		// Turns the array of factors from Strings to longs
 		int i = 0;
-		for(String str : strArray) {
+		for (String str : strArray) {
 			factorArray[i] = Long.parseLong(strArray[i]);
 			i++;
 		}
@@ -44,7 +44,7 @@ public class Functions {
 		long count = 0;
 
 		// Counts how many times each prime factor appears and puts it in a list
-		for(int i = 0; i < factors.length; i++) {
+		for (int i = 0; i < factors.length; i++) {
 			if (factors[i] == factors[check]) {
 				count++;
 			} else {
@@ -58,7 +58,7 @@ public class Functions {
 		// Turns the list of counts into an array
 		Long[] countsArray = new Long[counts.size()];
 
-		for(int i = 0; i < counts.size(); i++) {
+		for (int i = 0; i < counts.size(); i++) {
 			countsArray[i] = counts.get(i);
 		}
 
@@ -71,7 +71,7 @@ public class Functions {
 
 		long factorTotal = 1;
 
-		for(long i : factorCounts) {
+		for (long i : factorCounts) {
 			factorTotal *= (i + 1);
 		}
 
